@@ -1,2 +1,2 @@
 
-// You can add any Javascript code here if needed
+// No Javascript is required for this simple form.
