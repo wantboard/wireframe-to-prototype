@@ -2,33 +2,40 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Zoogle</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>My Drop Down Form</title>
+    <link href="style.css" rel="stylesheet">
   </head>
   <body>
-    <header>
-      <nav>
-        <a href="#">Gmail</a>
-        <a href="#">Images</a>
-        <button>Sign in</button>
-      </nav>
-    </header>
-    <div id="logo-container">
-      <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" alt="Zoogle Logo">
-    </div>
+    <h1>My Drop Down Form</h1>
     <form>
-      <input type="text" placeholder="Search...">
-      <div id="buttons-container">
-        <button type="submit">Google Search</button>
-        <button>I'm Feeling Lucky</button>
-      </div>
+      <label for="option-one">Option One:</label>
+      <select id="option-one">
+        <option value=""></option>
+        <option value="option-1a">Option 1a</option>
+        <option value="option-1b">Option 1b</option>
+        <option value="option-1c">Option 1c</option>
+      </select>
+      <label for="option-two">Option Two:</label>
+      <select id="option-two">
+        <option value=""></option>
+        <option value="option-2a">Option 2a</option>
+        <option value="option-2b">Option 2b</option>
+        <option value="option-2c">Option 2c</option>
+      </select>
+      <label for="option-three">Option Three:</label>
+      <select id="option-three">
+        <option value=""></option>
+        <option value="option-3a">Option 3a</option>
+        <option value="option-3b">Option 3b</option>
+        <option value="option-3c">Option 3c</option>
+      </select>
+      <br>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+      <br>
+      <button type="submit">Submit</button>
     </form>
-    <footer>
-      <a href="#">Advertising</a>
-      <a href="#">Business</a>
-      <a href="#">About</a>
-      <a href="#">Settings</a>
-    </footer>
+    <script src="script.js"></script>
   </body>
 </html>
