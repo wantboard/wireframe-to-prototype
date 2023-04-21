@@ -2,6 +2,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Joke Generator</title>
     <link rel="stylesheet" href="style.css">
@@ -13,12 +14,16 @@
         <p id="joke-text">Click the button below to generate a joke!</p>
         <button id="generate-btn">Generate Joke</button>
       </div>
-      <div class="submit">
+      <div class="submission-form">
         <h2>Submit Your Own Joke</h2>
-        <form>
-          <label for="joke-input">Enter your joke:</label>
-          <input type="text" id="joke-input" name="joke-input">
-          <button type="submit">Submit</button>
+        <form id="joke-form">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required>
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+          <label for="joke">Joke:</label>
+          <textarea id="joke" name="joke" required></textarea>
+          <button type="submit">Submit Joke</button>
         </form>
       </div>
     </div>
