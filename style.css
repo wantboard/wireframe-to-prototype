@@ -1,75 +1,93 @@
 
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  margin: 0;
   font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
   background-color: #f2f2f2;
 }
 
-.container {
-  max-width: 600px;
-  margin: 0 auto;
+header {
+  background-color: #333;
+  color: #fff;
   padding: 20px;
-  text-align: center;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-  margin-bottom: 30px;
-}
-
-form {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 }
 
-input[type="text"] {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  border: none;
-  border-radius: 4px;
-  background-color: #fff;
-  font-size: 16px;
+nav ul {
+  list-style: none;
+  display: flex;
 }
 
-button[type="submit"] {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  border: none;
-  border-radius: 4px;
-  background-color: #4285f4;
+nav li {
+  margin-right: 20px;
+}
+
+nav a {
   color: #fff;
-  font-size: 16px;
+  text-decoration: none;
+}
+
+main {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+article {
+  background-color: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+article h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+form {
+  background-color: #fff;
+  padding: 20px;
+}
+
+form h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+form label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+form button {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
 }
 
-button[type="submit"]:hover {
-  background-color: #357ae8;
-}
-
-@media only screen and (max-width: 390px) {
-  .container {
-    padding: 10px;
-  }
-  
-  img {
-    margin-bottom: 20px;
-  }
-  
-  input[type="text"] {
-    font-size: 14px;
-  }
-  
-  button[type="submit"] {
-    font-size: 14px;
-  }
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
 }
