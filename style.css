@@ -9,91 +9,94 @@ body {
   font-family: Arial, sans-serif;
   font-size: 16px;
   line-height: 1.5;
-  background-color: #f2f2f2;
+  color: #333;
 }
 
 header {
-  background-color: #333;
+  background-color: #222;
   color: #fff;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+nav li {
+  margin-right: 20px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.hero {
+  background-color: #eee;
+  padding: 50px;
   text-align: center;
-  padding: 20px;
 }
 
-header h1 {
-  font-size: 2rem;
-  margin: 0;
-}
-
-main {
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 20px;
-}
-
-#joke-container {
-  background-color: #fff;
-  border: 1px solid #ccc;
-  padding: 20px;
+.hero h2 {
+  font-size: 36px;
   margin-bottom: 20px;
 }
 
-#joke-container h2 {
-  font-size: 1.5rem;
-  margin-bottom: 10px;
+.hero p {
+  font-size: 18px;
+  margin-bottom: 40px;
 }
 
-#joke {
-  font-size: 1.2rem;
-  margin-bottom: 20px;
-}
-
-#generate-btn {
-  background-color: #333;
+.btn {
+  display: inline-block;
+  background-color: #222;
   color: #fff;
-  border: none;
   padding: 10px 20px;
-  font-size: 1rem;
-  cursor: pointer;
-}
-
-#generate-btn:hover {
-  background-color: #444;
-}
-
-#form-container {
-  background-color: #fff;
-  border: 1px solid #ccc;
-  padding: 20px;
-}
-
-#form-container h2 {
-  font-size: 1.5rem;
-  margin-bottom: 10px;
-}
-
-form label {
-  display: block;
-  margin-bottom: 5px;
-}
-
-form input,
-form textarea {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 10px;
-  border: 1px solid #ccc;
   border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
 }
 
-form button[type="submit"] {
-  background-color: #333;
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  font-size: 1rem;
-  cursor: pointer;
-}
-
-form button[type="submit"]:hover {
+.btn:hover {
   background-color: #444;
+}
+
+.products {
+  padding: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.product {
+  width: calc(33.33% - 20px);
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.product img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.product h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.product p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+footer {
+  background-color: #222;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
 }
