@@ -1,27 +1,35 @@
 
 const jokeText = document.getElementById('joke-text');
 const generateBtn = document.getElementById('generate-btn');
+const jokeForm = document.getElementById('joke-form');
 
-const jokes = [
-  'Why did the tomato turn red? Because it saw the salad dressing!',
-  'Why did the scarecrow win an award? Because he was outstanding in his field!',
-  'Why did the chicken cross the playground? To get to the other slide!',
-  'Why did the cookie go to the doctor? Because it was feeling crumbly!',
-  'Why did the banana go to the doctor? Because it wasn\'t peeling well!'
-];
+// Joke API URL
+const jokeApiUrl = 'https://official-joke-api.appspot.com/random_joke';
 
-generateBtn.addEventListener('click', () => {
-  const randomIndex = Math.floor(Math.random() * jokes.length);
-  jokeText.textContent = jokes[randomIndex];
-});
+// Generate a random joke
+function generateJoke() {
+  fetch(jokeApiUrl)
+    .then(response => response.json())
+    .then(data => {
+      jokeText.textContent = `${data.setup} ${data.punchline}`;
+    })
+    .catch(error => {
+      jokeText.textContent = 'Oops! Something went wrong. Please try again later.';
+    });
+}
 
-const form = document.querySelector('form');
-
-form.addEventListener('submit', (event) => {
+// Submit a joke
+function submitJoke(event) {
   event.preventDefault();
-  const jokeInput = document.getElementById('joke-input');
-  const newJoke = jokeInput.value;
-  jokes.push(newJoke);
-  jokeInput.value = '';
-  alert('Thanks for submitting a joke!');
-});
+  const name = document.getElementById('name').value;
+  const email = document.getElementById('email').value;
+  const joke = document.getElementById('joke').value;
+  // Send the joke data to the server
+  // ...
+  // Clear the form
+  jokeForm.reset();
+  alert('Thank you for submitting your joke!');
+}
+
+generateBtn.addEventListener('click', generateJoke);
+jokeForm.addEventListener('submit', submitJoke);
