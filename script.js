@@ -1,35 +1,32 @@
 
-const jokeText = document.getElementById('joke-text');
+const jokeContainer = document.getElementById('joke-container');
+const jokeText = document.getElementById('joke');
 const generateBtn = document.getElementById('generate-btn');
 const jokeForm = document.getElementById('joke-form');
 
 // Joke API URL
 const jokeApiUrl = 'https://official-joke-api.appspot.com/random_joke';
 
-// Generate a random joke
+// Function to generate a joke
 function generateJoke() {
-  fetch(jokeApiUrl)
-    .then(response => response.json())
-    .then(data => {
-      jokeText.textContent = `${data.setup} ${data.punchline}`;
-    })
-    .catch(error => {
-      jokeText.textContent = 'Oops! Something went wrong. Please try again later.';
-    });
+	fetch(jokeApiUrl)
+		.then(response => response.json())
+		.then(data => {
+			jokeText.innerHTML = `${data.setup} ${data.punchline}`;
+			jokeContainer.style.display = 'block';
+		})
+		.catch(error => console.log(error));
 }
 
-// Submit a joke
-function submitJoke(event) {
-  event.preventDefault();
-  const name = document.getElementById('name').value;
-  const email = document.getElementById('email').value;
-  const joke = document.getElementById('joke').value;
-  // Send the joke data to the server
-  // ...
-  // Clear the form
-  jokeForm.reset();
-  alert('Thank you for submitting your joke!');
-}
-
+// Event listener for generate button
 generateBtn.addEventListener('click', generateJoke);
-jokeForm.addEventListener('submit', submitJoke);
+
+// Event listener for joke form submission
+jokeForm.addEventListener('submit', (event) => {
+	event.preventDefault();
+	const name = document.getElementById('name').value;
+	const email = document.getElementById('email').value;
+	const joke = document.getElementById('joke-text').value;
+	console.log(`Name: ${name}\nEmail: ${email}\nJoke: ${joke}`);
+	jokeForm.reset();
+});
