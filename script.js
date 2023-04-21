@@ -1,2 +1,2 @@
 
-// No JavaScript required for this webpage
+// No Javascript required for this page
