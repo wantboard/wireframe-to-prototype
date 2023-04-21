@@ -12,7 +12,7 @@ function generateJoke() {
 	fetch(jokeApiUrl)
 		.then(response => response.json())
 		.then(data => {
-			jokeText.innerHTML = `${data.setup} ${data.punchline}`;
+			jokeText.innerHTML = `${data.setup} <br> ${data.punchline}`;
 			jokeContainer.style.display = 'block';
 		})
 		.catch(error => console.log(error));
@@ -27,6 +27,7 @@ jokeForm.addEventListener('submit', (event) => {
 	const name = document.getElementById('name').value;
 	const email = document.getElementById('email').value;
 	const joke = document.getElementById('joke-text').value;
-	console.log(`Name: ${name}\nEmail: ${email}\nJoke: ${joke}`);
+	console.log(`Name: ${name}, Email: ${email}, Joke: ${joke}`);
 	jokeForm.reset();
+	alert('Joke submitted successfully!');
 });
