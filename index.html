@@ -2,40 +2,32 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="UTF-8">
-    <title>My Drop Down Form</title>
-    <link href="style.css" rel="stylesheet">
+    <title>My Favorite Foods</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
   </head>
   <body>
-    <h1>My Drop Down Form</h1>
-    <form>
-      <label for="option-one">Option One:</label>
-      <select id="option-one">
-        <option value=""></option>
-        <option value="option-1a">Option 1a</option>
-        <option value="option-1b">Option 1b</option>
-        <option value="option-1c">Option 1c</option>
-      </select>
-      <label for="option-two">Option Two:</label>
-      <select id="option-two">
-        <option value=""></option>
-        <option value="option-2a">Option 2a</option>
-        <option value="option-2b">Option 2b</option>
-        <option value="option-2c">Option 2c</option>
-      </select>
-      <label for="option-three">Option Three:</label>
-      <select id="option-three">
-        <option value=""></option>
-        <option value="option-3a">Option 3a</option>
-        <option value="option-3b">Option 3b</option>
-        <option value="option-3c">Option 3c</option>
-      </select>
-      <br>
-      <label for="name">Name:</label>
-      <input type="text" id="name" name="name" required>
-      <br>
-      <button type="submit">Submit</button>
-    </form>
+    <div class="container">
+      <h1>My Favorite Foods</h1>
+      <form id="myForm" onsubmit="return validateForm()">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="foods">Favorite Foods:</label>
+        <select id="foods" name="foods">
+          <option value="pizza">Pizza</option>
+          <option value="sushi">Sushi</option>
+          <option value="tacos">Tacos</option>
+          <option value="pasta">Pasta</option>
+          <option value="burger">Burger</option>
+        </select>
+
+        <input type="submit" value="Submit">
+      </form>
+    </div>
+
     <script src="script.js"></script>
   </body>
 </html>
