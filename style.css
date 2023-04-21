@@ -1,102 +1,75 @@
-css
-/* Reset styles */
+
 * {
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
 }
 
-/* Basic styles */
 body {
+  margin: 0;
   font-family: Arial, sans-serif;
-  font-size: 16px;
-  line-height: 1.5;
-  color: #333;
+  background-color: #f2f2f2;
 }
 
-header {
-  background-color: #f2f2f2;
-  padding: 1rem;
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 30px;
+}
+
+form {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: center;
   align-items: center;
 }
 
-nav ul {
-  list-style: none;
-  display: flex;
-}
-
-nav li {
-  margin-right: 1rem;
-}
-
-nav a {
-  text-decoration: none;
-  color: #333;
-}
-
-main {
-  padding: 1rem;
-}
-
-.featured {
-  margin-bottom: 2rem;
-}
-
-.featured h2 {
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-}
-
-.featured img {
+input[type="text"] {
   width: 100%;
-  height: auto;
-  margin-bottom: 1rem;
+  padding: 12px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  background-color: #fff;
+  font-size: 16px;
 }
 
-.featured h3 {
-  font-size: 1.25rem;
-  margin-bottom: 0.5rem;
-}
-
-.featured p {
-  margin-bottom: 1rem;
-}
-
-.read-more {
-  display: inline-block;
-  background-color: #333;
+button[type="submit"] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  background-color: #4285f4;
   color: #fff;
-  padding: 0.5rem 1rem;
-  border-radius: 0.25rem;
-  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-.read-more:hover {
-  background-color: #666;
+button[type="submit"]:hover {
+  background-color: #357ae8;
 }
 
-.recent-posts h2 {
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-}
-
-.recent-posts ul {
-  list-style: none;
-}
-
-.recent-posts li {
-  margin-bottom: 0.5rem;
-}
-
-.recent-posts a {
-  text-decoration: none;
-  color: #333;
-}
-
-footer {
-  background-color: #f2f2f2;
-  padding: 1rem;
-  text-align: center;
+@media only screen and (max-width: 390px) {
+  .container {
+    padding: 10px;
+  }
+  
+  img {
+    margin-bottom: 20px;
+  }
+  
+  input[type="text"] {
+    font-size: 14px;
+  }
+  
+  button[type="submit"] {
+    font-size: 14px;
+  }
 }
