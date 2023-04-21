@@ -1,32 +1,33 @@
 
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <title>World Class UX/UI Design</title>
-    <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-    <h1>World Class UX/UI Design</h1>
-    <form>
-      <label for="dropdown1">Dropdown 1:</label>
-      <select id="dropdown1" name="dropdown1">
-        <option value="option1">Option 1</option>
-        <option value="option2">Option 2</option>
-        <option value="option3">Option 3</option>
-      </select>
-      <label for="dropdown2">Dropdown 2:</label>
-      <select id="dropdown2" name="dropdown2">
-        <option value="option1">Option 1</option>
-        <option value="option2">Option 2</option>
-        <option value="option3">Option 3</option>
-      </select>
-      <label for="calendar">Calendar:</label>
-      <input type="date" id="calendar" name="calendar">
-      <label for="textbox">Text Box:</label>
-      <textarea id="textbox" name="textbox" rows="10" cols="50"></textarea>
-      <input type="submit" value="Submit">
-    </form>
-    <script src="script.js"></script>
-  </body>
+<head>
+	<title>My Favorite Foods</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div class="container">
+		<h1>My Favorite Foods</h1>
+		<form id="myForm" onsubmit="return validateForm()">
+			<label for="name">Name:</label>
+			<input type="text" id="name" name="name" required>
+
+			<label for="email">Email:</label>
+			<input type="email" id="email" name="email" required>
+
+			<label for="foods">Favorite Foods:</label>
+			<select id="foods" name="foods">
+				<option value="pizza">Pizza</option>
+				<option value="tacos">Tacos</option>
+				<option value="sushi">Sushi</option>
+				<option value="pasta">Pasta</option>
+				<option value="burger">Burger</option>
+			</select>
+
+			<input type="submit" value="Submit">
+		</form>
+	</div>
+
+	<script src="script.js"></script>
+</body>
 </html>
