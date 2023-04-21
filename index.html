@@ -3,39 +3,25 @@
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog Homepage</title>
+    <title>Joke Generator</title>
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <header>
-      <h1>My Blog</h1>
-      <nav>
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-      </nav>
-    </header>
-    <main>
-      <article>
-        <h2>My First Blog Post</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc vel bibendum bibendum, quam velit bibendum ipsum, euismod bibendum velit vel bibendum. Sed euismod, nunc vel bibendum bibendum, quam velit bibendum ipsum, euismod bibendum velit vel bibendum.</p>
-        <p>Donec euismod, nunc vel bibendum bibendum, quam velit bibendum ipsum, euismod bibendum velit vel bibendum. Sed euismod, nunc vel bibendum bibendum, quam velit bibendum ipsum, euismod bibendum velit vel bibendum.</p>
-      </article>
-      <form>
-        <h2>Contact Us</h2>
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required>
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
-        <label for="message">Message:</label>
-        <textarea id="message" name="message" required></textarea>
-        <button type="submit">Send</button>
-      </form>
-    </main>
-    <footer>
-      <p>&copy; 2021 My Blog. All rights reserved.</p>
-    </footer>
+    <div class="container">
+      <h1>Joke Generator</h1>
+      <div class="joke">
+        <p id="joke-text">Click the button below to generate a joke!</p>
+        <button id="generate-btn">Generate Joke</button>
+      </div>
+      <div class="submit">
+        <h2>Submit Your Own Joke</h2>
+        <form>
+          <label for="joke-input">Enter your joke:</label>
+          <input type="text" id="joke-input" name="joke-input">
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+    </div>
+    <script src="script.js"></script>
   </body>
 </html>
