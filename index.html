@@ -1,32 +1,41 @@
 
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Hotel Room Booking</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
-</head>
-<body>
-	<div class="container">
-		<h1>Hotel Room Booking</h1>
-		<form>
-			<label for="checkin">Check-in Date:</label>
-			<input type="date" id="checkin" name="checkin">
-
-			<label for="checkout">Check-out Date:</label>
-			<input type="date" id="checkout" name="checkout">
-
-			<label for="roomtype">Room Type:</label>
-			<select id="roomtype" name="roomtype">
-				<option value="standard">Standard</option>
-				<option value="deluxe">Deluxe</option>
-				<option value="suite">Suite</option>
-			</select>
-
-			<label for="numguests">Number of Guests:</label>
-			<input type="number" id="numguests" name="numguests" min="1" max="4">
-
-			<input type="submit" value="Submit">
-		</form>
-	</div>
-</body>
+  <head>
+    <meta charset="UTF-8">
+    <title>My Drop Down Form</title>
+    <link href="style.css" rel="stylesheet">
+  </head>
+  <body>
+    <h1>My Drop Down Form</h1>
+    <form>
+      <label for="option-one">Option One:</label>
+      <select id="option-one">
+        <option value=""></option>
+        <option value="option-1a">Option 1a</option>
+        <option value="option-1b">Option 1b</option>
+        <option value="option-1c">Option 1c</option>
+      </select>
+      <label for="option-two">Option Two:</label>
+      <select id="option-two">
+        <option value=""></option>
+        <option value="option-2a">Option 2a</option>
+        <option value="option-2b">Option 2b</option>
+        <option value="option-2c">Option 2c</option>
+      </select>
+      <label for="option-three">Option Three:</label>
+      <select id="option-three">
+        <option value=""></option>
+        <option value="option-3a">Option 3a</option>
+        <option value="option-3b">Option 3b</option>
+        <option value="option-3c">Option 3c</option>
+      </select>
+      <br>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+      <br>
+      <button type="submit">Submit</button>
+    </form>
+    <script src="script.js"></script>
+  </body>
 </html>
