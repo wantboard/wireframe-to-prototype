@@ -1,55 +1,102 @@
-
+css
+/* Reset styles */
 * {
-	box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
+/* Basic styles */
 body {
-	font-family: Arial, sans-serif;
-	margin: 0;
-	padding: 0;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
 }
 
-.container {
-	max-width: 600px;
-	margin: 0 auto;
-	padding: 20px;
+header {
+  background-color: #f2f2f2;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-h1 {
-	text-align: center;
-	margin-bottom: 20px;
+nav ul {
+  list-style: none;
+  display: flex;
 }
 
-form {
-	background-color: #f2f2f2;
-	padding: 20px;
-	border-radius: 10px;
+nav li {
+  margin-right: 1rem;
 }
 
-label {
-	display: block;
-	margin-bottom: 10px;
+nav a {
+  text-decoration: none;
+  color: #333;
 }
 
-select {
-	width: 100%;
-	padding: 10px;
-	border: none;
-	border-radius: 5px;
-	background-color: #fff;
-	margin-bottom: 20px;
+main {
+  padding: 1rem;
 }
 
-button[type="submit"] {
-	background-color: #007bff;
-	color: #fff;
-	padding: 10px 20px;
-	border: none;
-	border-radius: 5px;
-	cursor: pointer;
-	font-size: 16px;
+.featured {
+  margin-bottom: 2rem;
 }
 
-button[type="submit"]:hover {
-	background-color: #0069d9;
+.featured h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.featured img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+.featured h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.featured p {
+  margin-bottom: 1rem;
+}
+
+.read-more {
+  display: inline-block;
+  background-color: #333;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  text-decoration: none;
+}
+
+.read-more:hover {
+  background-color: #666;
+}
+
+.recent-posts h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.recent-posts ul {
+  list-style: none;
+}
+
+.recent-posts li {
+  margin-bottom: 0.5rem;
+}
+
+.recent-posts a {
+  text-decoration: none;
+  color: #333;
+}
+
+footer {
+  background-color: #f2f2f2;
+  padding: 1rem;
+  text-align: center;
 }
