@@ -1,0 +1,34 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generate a Joke</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header>
+      <h1>Generate a Joke</h1>
+    </header>
+    <main>
+      <div id="joke-container">
+        <h2>Here's your joke:</h2>
+        <p id="joke"></p>
+        <button id="generate-btn">Generate Joke</button>
+      </div>
+      <div id="form-container">
+        <h2>Submit a Joke</h2>
+        <form id="joke-form">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required>
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+          <label for="joke-text">Joke:</label>
+          <textarea id="joke-text" name="joke-text" required></textarea>
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
