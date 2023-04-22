@@ -3,32 +3,36 @@
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Generate a Joke</title>
+    <title>Hurdle</title>
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
     <header>
-      <h1>Generate a Joke</h1>
+      <h1>Hurdle</h1>
     </header>
     <main>
-      <div class="joke-container">
-        <h2>Here's your joke:</h2>
-        <p id="joke"></p>
-        <button id="generate-btn">Generate Joke</button>
-      </div>
-      <div class="form-container">
-        <h2>Submit a Joke</h2>
-        <form id="joke-form">
-          <label for="name">Name:</label>
-          <input type="text" id="name" name="name" required>
-          <label for="email">Email:</label>
-          <input type="email" id="email" name="email" required>
-          <label for="joke-text">Joke:</label>
-          <textarea id="joke-text" name="joke-text" required></textarea>
-          <button type="submit">Submit</button>
-        </form>
+      <div class="game-container">
+        <div class="word-container">
+          <h2>Word:</h2>
+          <p class="word">_ _ _ _ _</p>
+        </div>
+        <div class="guess-container">
+          <h2>Guess:</h2>
+          <form>
+            <input type="text" id="guess-input" placeholder="Enter your guess">
+            <button type="submit" id="guess-button">Guess</button>
+          </form>
+        </div>
+        <div class="guesses-container">
+          <h2>Guesses:</h2>
+          <ul id="guesses-list">
+          </ul>
+        </div>
       </div>
     </main>
+    <footer>
+      <p>&copy; 2021 Hurdle</p>
+    </footer>
     <script src="script.js"></script>
   </body>
 </html>
