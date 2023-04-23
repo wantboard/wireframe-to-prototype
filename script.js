@@ -1,20 +1,21 @@
 
-const jokeBtn = document.getElementById('generate-btn');
+const jokeContainer = document.getElementById('joke-container');
 const jokeText = document.getElementById('joke');
-
-jokeBtn.addEventListener('click', generateJoke);
-
-function generateJoke() {
-  // Code to generate a random joke goes here
-  jokeText.textContent = 'Why did the chicken cross the road? To get to the other side!';
-}
-
+const generateBtn = document.getElementById('generate-btn');
 const jokeForm = document.getElementById('joke-form');
 
+generateBtn.addEventListener('click', generateJoke);
 jokeForm.addEventListener('submit', submitJoke);
+
+function generateJoke() {
+  // Replace with code to generate a joke
+  const joke = 'Why did the tomato turn red? Because it saw the salad dressing!';
+  jokeText.textContent = joke;
+}
 
 function submitJoke(event) {
   event.preventDefault();
-  // Code to submit joke form data goes here
+  // Replace with code to submit joke form
   alert('Joke submitted!');
+  jokeForm.reset();
 }
