@@ -9,81 +9,83 @@ body {
   font-family: Arial, sans-serif;
   font-size: 16px;
   line-height: 1.5;
-  background-color: #f5f5f5;
+  background-color: #f2f2f2;
 }
 
 header {
   background-color: #333;
   color: #fff;
   padding: 20px;
-  text-align: center;
 }
 
 header h1 {
-  font-size: 2rem;
+  margin: 0;
 }
 
 main {
   padding: 20px;
 }
 
-.game-container {
+#joke-container {
+  margin-bottom: 20px;
   background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border: 1px solid #ccc;
   padding: 20px;
 }
 
-.word-container, .guess-container, .guesses-container {
-  margin-bottom: 20px;
-}
-
-.word-container h2, .guess-container h2, .guesses-container h2 {
-  font-size: 1.2rem;
+#joke-container h2 {
   margin-bottom: 10px;
 }
 
-.word-container .word {
-  font-size: 2rem;
-  font-weight: bold;
+#joke {
+  font-size: 24px;
+  margin-bottom: 10px;
 }
 
-.guess-container form {
-  display: flex;
-}
-
-.guess-container input[type="text"] {
-  flex-grow: 1;
-  padding: 10px;
-  border-radius: 5px;
-  border: none;
-  margin-right: 10px;
-}
-
-.guess-container button[type="submit"] {
+#generate-btn {
   background-color: #333;
   color: #fff;
   border: none;
-  border-radius: 5px;
-  padding: 10px;
+  padding: 10px 20px;
   cursor: pointer;
 }
 
-.guess-container button[type="submit"]:hover {
+#generate-btn:hover {
   background-color: #555;
 }
 
-.guesses-container ul {
-  list-style: none;
+#form-container {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 20px;
 }
 
-.guesses-container li {
+#form-container h2 {
+  margin-bottom: 10px;
+}
+
+form label {
+  display: block;
   margin-bottom: 5px;
 }
 
-footer {
+form input,
+form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+form button[type="submit"] {
   background-color: #333;
   color: #fff;
-  padding: 10px;
-  text-align: center;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+form button[type="submit"]:hover {
+  background-color: #555;
 }
